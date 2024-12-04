@@ -33,19 +33,19 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: "url('../static/images/bgsiva.png')"}}>
-          <StaticImage src="../images/mobilepplshake.png" placeholder="blurred" className="w-full md:hidden" imgClassName="md:hidden"  />
-          <StaticImage src="../images/desktoppplshake.png" placeholder="blurred" className="w-full py-10 hidden md:block" imgClassName="hidden md:block" />
-          <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 py-14 lg:py-20">
-            <h2 className="font-libre text-bordo uppercase text-lg lg:text-2xl italic">cilj: 10000 EUR!</h2>
+        <section className="w-full h-full bg-scroll relative bg-contain bg-center text-center" style={{ backgroundImage: "url('../static/images/bgppl.png')"}}>
+         {/*   <StaticImage src="../images/mobilepplshake.png" placeholder="blurred" className="w-full md:hidden" imgClassName="md:hidden"  />
+          <StaticImage src="../images/desktoppplshake.png" placeholder="blurred" className="w-full py-10 hidden md:block" imgClassName="hidden md:block" /> */}
+          <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 lg:py-20">
+            <h2 className="font-libre text-bordo uppercase text-lg lg:text-2xl italic pt-8">cilj: 10000 EUR!</h2>
             <p className="font-libre text-darkgrey text-sm lg:text-md2 lg:w-1/2 py-8 lg:py-12">
               <strong>Pomozite nam</strong> da uljepšamo blagdane i ulazak u novu godinu našim nevidljivim sugrađanima!
             </p>
             <Button imageSrc={btn} className="w-full lg:w-1/3">DONIRAJ</Button>
-            <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4">IBAN: HR183981793284791874</p>
+            <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4 pb-16">IBAN: HR183981793284791874</p>
           </div>
-          <StaticImage src="../images/mobilepplhappy.png" placeholder="blurred" className="w-full md:hidden lg:hidden xl:hidden" imgClassName="md:hidden" />
-          <StaticImage src="../images/desktoppplhappy.png" placeholder="blurred" className="w-full py-10 hidden md:block" imgClassName="hidden md:block" />
+        {/*   <StaticImage src="../images/mobilepplhappy.png" placeholder="blurred" className="w-full md:hidden lg:hidden xl:hidden" imgClassName="md:hidden" />
+          <StaticImage src="../images/desktoppplhappy.png" placeholder="blurred" className="w-full py-10 hidden md:block" imgClassName="hidden md:block" /> */}
         </section>
         <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: "url('../static/images/bgsiva.png')"}}>
           <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 py-14 lg:py-20">
