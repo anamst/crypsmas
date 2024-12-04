@@ -44,7 +44,7 @@ const IndexPage = () => {
             <Button imageSrc={btn} className="w-full lg:w-1/3">DONIRAJ</Button>
             <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4">IBAN: HR183981793284791874</p>
           </div>
-          <StaticImage src="../images/mobilepplhappy.png" className="w-full md:hidden" />
+          <StaticImage src="../images/mobilepplhappy.png" className="w-full md:hidden lg:hidden xl:hidden" />
           <StaticImage src="../images/desktoppplhappy.png" className="w-full py-10 hidden md:block" />
         </section>
         <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: "url('../static/images/bgsiva.png')"}}>

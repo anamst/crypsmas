@@ -2,6 +2,9 @@
 module.exports = {
   content: [
     "./src/**/**/*.{js,jsx,ts,tsx}",],
+    safelist: [
+      'block', 'hidden', 'lg:block', 'lg:hidden',  
+    ],
   theme: {
     fontFamily: {
       'inter': ["Inter", 'sans-serif'],
