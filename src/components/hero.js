@@ -64,7 +64,7 @@ const Hero = ({ children }) => {
                 <Button imageSrc={btn} className="w-full lg:w-1/2">DONIRAJ</Button>
             </div>
             <div className="bg-white shadow-2xl rounded-full py-12 lg:py-16 px-8">
-                <StaticImage src="../images/hmblogo.png" className="w-24 lg:w-72" />
+                <StaticImage src="../images/hmblogo.png" placeholder="blurred" className="w-24 lg:w-72" />
             </div>
             
         </div>       

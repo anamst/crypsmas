@@ -25,7 +25,7 @@ const Header = ({ children }) => {
       }`}
     >
       <div className="py-2 px-6 lg:px-20 xl:px-32 lg:py-4 flex items-center">
-        <StaticImage src="../images/ubiklogo.png" className="w-36 lg:w-64" alt="Logo" />
+        <StaticImage src="../images/ubiklogo.png" placeholder="blurred" className="w-36 lg:w-64" alt="Logo" />
         {children}
       </div>
     </header>
