@@ -17,7 +17,7 @@ const IndexPage = () => {
     <>
       <Layout>
         <Hero />
-        <section className="w-full h-full bg-scroll relative bg-cover bg-center" style={{ backgroundImage: "url('./static/images/bgsiva.png')"}}>
+        <section className="w-full h-full bg-scroll relative bg-cover bg-center" style={{ backgroundImage: "url('../static/images/bgsiva.png')"}}>
           <div className="flex flex-col justify-around items-start pt-14 px-6 lg:px-20 xl:px-32">
             <h2 className="font-libre text-bordo uppercase italic text-md lg:text-lg lg:pt-20">podržite akciju</h2>
             <p className="font-libre text-darkgrey text-sm pb-8 lg:pb-10 lg:text-md2 pt-4 lg:pt-8">Povodom božićnih blagdana i kraja godine, <strong>Udruga za blockchain i kriptovalute</strong> organizira akciju darivanja s ciljem podupiranja djelovanja <strong>Hrvatske mreže za beskućnike</strong> (HMB).</p>
@@ -33,7 +33,7 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: "url('./static/images/bgsiva.png')"}}>
+        <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: "url('../static/images/bgsiva.png')"}}>
           <StaticImage src="../images/mobilepplshake.png" className="w-full md:hidden" />
           <StaticImage src="../images/desktoppplshake.png" className="w-full py-10 hidden md:block" />
           <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 py-14 lg:py-20">
@@ -47,7 +47,7 @@ const IndexPage = () => {
           <StaticImage src="../images/mobilepplhappy.png" className="w-full md:hidden" />
           <StaticImage src="../images/desktoppplhappy.png" className="w-full py-10 hidden md:block" />
         </section>
-        <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: "url('./static/images/bgsiva.png')"}}>
+        <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: "url('../static/images/bgsiva.png')"}}>
           <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 py-14 lg:py-20">
             <h2 className="font-libre text-bordo uppercase italic text-md lg:text-lg">Dosad je prikupljeno:</h2>
             <ProgressBar value={value} target={target} className="mt-8" />
