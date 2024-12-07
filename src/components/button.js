@@ -10,35 +10,38 @@ const Button = ({ children, className = "", imageSrc, altText = "icon" }) => {
     //   console.error('Payment initialization failed:', error);
     //  }
     try {
-      console.log("Starting PayCek payment request...");
-      // const response = await fetch("/api/paycek");
+      console.log('Starting PayCek payment request...');
       console.log('Button clicked');
+      
       const functionUrl = '/.netlify/functions/paycek';
       console.log('Calling function:', functionUrl);
-
-      console.log("Response status:", response.status);
-
-      const text = await response.text();
-      console.log("Raw response:", text);
-
-      const data = JSON.parse(text);
-      console.log("Parsed response:", data);
-
+      
+      const fetchResponse = await fetch(functionUrl);
+      console.log('Response status:', fetchResponse.status);
+      
+      if (!fetchResponse.ok) {
+        throw new Error(`HTTP error! status: ${fetchResponse.status}`);
+      }
+      
+      const data = await fetchResponse.json();
+      console.log('Data received:', data);
+      
       if (data.error) {
         throw new Error(`API Error: ${data.error}`);
       }
-
+      
       if (!data.url) {
-        throw new Error("No payment URL in response");
+        throw new Error('No payment URL in response');
       }
-
-      console.log("Redirecting to:", data.url);
+      
+      console.log('Redirecting to:', data.url);
       window.location.href = data.url;
+      
     } catch (error) {
-      console.error("Payment initialization failed:", error);
-      console.error("Error details:", {
+      console.error('Payment initialization failed:', error);
+      console.error('Error details:', {
         message: error.message,
-        stack: error.stack,
+        stack: error.stack
       });
     }
   };
