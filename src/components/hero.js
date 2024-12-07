@@ -30,7 +30,7 @@ const Hero = ({ children }) => {
           }}
           layout="fullWidth"
           alt="Mobile background"
-          src="../images/bg-mobile.png"
+          src="../images/bgsiva.png"
           formats={["auto", "webp", "avif"]}
         />
       ) : (
@@ -56,15 +56,15 @@ const Hero = ({ children }) => {
           paddingTop: "80px",
         }}
       >
-        <div className="container mx-auto w-full px-4 lg:px-16 xl:px-12 flex flex-col lg:flex-row justify-around items-center lg:justify-between lg:items-center"> 
-            <div className="flex flex-col justify-between items-start text-left">
+        <div className="container mx-auto w-full px-4 lg:px-16 xl:px-12 flex flex-col lg:flex-row-reverse justify-start items-center lg:justify-between lg:items-center"> 
+            <div className="bg-white shadow-2xl rounded-full py-12 lg:py-16 px-8 ml-20 lg:ml-0 lg:mr-20">
+                <StaticImage src="../images/hmblogo.png" placeholder="blurred" className="w-24 lg:w-48" />
+            </div>
+            <div className="flex flex-col justify-between items-start text-left pt-8 lg:pt-0">
                 <h2 className="font-libre text-bordo uppercase italic text-md lg:text-lg">humanitarna akcija</h2>
                 <h1 className="font-libre text-black uppercase font-semibold text-lg lg:text-2xl lg:py-4">merry crypsmas</h1>
                 <p className="font-inter text-darkgrey text-sm pb-8 lg:pb-10 lg:text-md2 lg:w-2/3 italic">Pozivamo vas da podržite UBIK humanitarnu akciju namijenjenu pomaganju jednoj od društveno najugroženijih skupina!</p>
                 <Button imageSrc={btn} className="w-full lg:w-1/2">DONIRAJ</Button>
-            </div>
-            <div className="bg-white shadow-2xl rounded-full py-12 lg:py-16 px-8">
-                <StaticImage src="../images/hmblogo.png" placeholder="blurred" className="w-24 lg:w-72" />
             </div>
             
         </div>       
