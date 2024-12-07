@@ -12,7 +12,9 @@ const Button = ({ children, className = "", imageSrc, altText = "icon" }) => {
     try {
       console.log("Starting PayCek payment request...");
       // const response = await fetch("/api/paycek");
-      const response = await fetch('/.netlify/functions/paycek');
+      console.log('Button clicked');
+      const functionUrl = '/.netlify/functions/paycek';
+      console.log('Calling function:', functionUrl);
 
       console.log("Response status:", response.status);
 
