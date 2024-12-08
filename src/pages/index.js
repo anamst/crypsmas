@@ -19,7 +19,7 @@ const IndexPage = () => {
     <>
       <Layout>
         <Hero />
-        <section className="w-full h-full bg-scroll relative bg-cover bg-center" style={{ backgroundImage: `url(${bgsiva})` }}>
+        <section className="w-full h-full relative bg-contain bg-center" style={{ backgroundImage: `url(${bgsiva})` }}>
           <div className="flex flex-col justify-around items-start pt-14 px-6 lg:px-20 xl:px-32">
             <h2 className="font-libre text-bordo uppercase italic text-md lg:text-lg lg:pt-20">podržite akciju</h2>
             <p className="font-libre text-darkgrey text-sm pb-8 lg:pb-10 lg:text-md2 pt-4 lg:pt-8">Povodom božićnih blagdana i kraja godine, <strong>Udruga za blockchain i kriptovalute</strong> organizira akciju darivanja s ciljem podupiranja djelovanja <strong>Hrvatske mreže za beskućnike</strong> (HMB).</p>
@@ -45,7 +45,7 @@ const IndexPage = () => {
             <p className="font-libre text-darkgrey text-sm lg:text-md2 lg:w-1/2 py-8 lg:py-12">
               <strong>Pomozite nam</strong> da uljepšamo blagdane i ulazak u novu godinu našim nevidljivim sugrađanima!
             </p>
-            <Button imageSrc={btn} className="w-full lg:w-1/3">DONIRAJ</Button>
+            <Button imageSrc={btn} className="w-full lg:w-1/3">DONIRAJ KRIPTO</Button>
             <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4 pb-16">Ili uplatom na IBAN: HR183981793284791874 <br></br> Opis plaćanja: Donacija za humanitarnu akciju</p>
           </div>
         {/*   <StaticImage src="../images/mobilepplhappy.png" placeholder="blurred" className="w-full md:hidden lg:hidden xl:hidden" imgClassName="md:hidden" />

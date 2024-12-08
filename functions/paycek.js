@@ -6,12 +6,10 @@ exports.handler = async function(event, context) {
     const profileCode = process.env.GATSBY_PAYCEK_PROFILE_CODE;
     const secretKey = process.env.GATSBY_PAYCEK_SECRET_KEY;
 
-    // Validate credentials
     if (!profileCode || !secretKey) {
       throw new Error('Missing PayCek credentials');
     }
 
-    // Rest of your existing code...
     const timestamp = Date.now();
     const random = Math.random().toString(36).substring(2, 8);
     const paymentId = `PAY_${timestamp}_${random}`;
@@ -19,7 +17,9 @@ exports.handler = async function(event, context) {
     const paymentData = {
       'id': paymentId,
       'p': '1000',
-      't': '1000'
+      't': '1000',
+      'test': false,
+      'l': 'hr'
     };
 
     const dataJson = JSON.stringify(paymentData);
