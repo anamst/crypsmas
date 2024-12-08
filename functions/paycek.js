@@ -18,6 +18,8 @@ exports.handler = async function(event, context) {
       'id': paymentId,
       'p': '1000',
       't': '1000',
+      'test': false,  // Live mode
+      'l': 'hr'       // Croatian language
     };
 
     const dataJson = JSON.stringify(paymentData);
@@ -37,6 +39,10 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         url,
         debug: {
@@ -50,6 +56,10 @@ exports.handler = async function(event, context) {
     console.error('API Error:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         error: error.message
       })
