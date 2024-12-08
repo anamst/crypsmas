@@ -1,14 +1,7 @@
-import * as React from "react";
+import React from 'react';
 
-const Button = ({ children, className = "", imageSrc, altText = "icon" }) => {
+const Button = ({ imageSrc, children, className }) => {
   const handlePayment = async () => {
-    //  try {
-    //  const result = await fetch("/api/paycek");
-    //  const { url } = await result.json();
-    //  window.location.href = url;
-    //  } catch (error) {
-    //   console.error('Payment initialization failed:', error);
-    //  }
     try {
       console.log('Starting PayCek payment request...');
       console.log('Button clicked');
@@ -16,15 +9,27 @@ const Button = ({ children, className = "", imageSrc, altText = "icon" }) => {
       const functionUrl = '/.netlify/functions/paycek';
       console.log('Calling function:', functionUrl);
       
-      const fetchResponse = await fetch(functionUrl);
+      const fetchResponse = await fetch(functionUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
       console.log('Response status:', fetchResponse.status);
       
-      if (!fetchResponse.ok) {
-        throw new Error(`HTTP error! status: ${fetchResponse.status}`);
-      }
+      // Log the raw response for debugging
+      const rawText = await fetchResponse.text();
+      console.log('Raw response:', rawText);
       
-      const data = await fetchResponse.json();
-      console.log('Data received:', data);
+      // Try to parse the response
+      let data;
+      try {
+        data = JSON.parse(rawText);
+      } catch (parseError) {
+        console.error('Failed to parse response:', parseError);
+        throw new Error('Invalid response from server');
+      }
       
       if (data.error) {
         throw new Error(`API Error: ${data.error}`);
@@ -48,29 +53,13 @@ const Button = ({ children, className = "", imageSrc, altText = "icon" }) => {
 
   return (
     <button
-      type="button"
       onClick={handlePayment}
-      className={`
-        ${className}
-        relative flex items-center overflow-hidden rounded-full
-        text-red bg-white font-medium shadow-xl
-        transition-all duration-300 ease-in-out hover:text-white group
-      `}>
-      {" "}
-      {imageSrc && (
-        <img
-          src={imageSrc}
-          alt={altText}
-          className="absolute left-0 w-14 h-14 object-contain"
-        />
-      )}{" "}
-      <span className="absolute inset-0 bg-red transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 z-0 origin-left">
-        {" "}
-      </span>{" "}
-      <span className="relative z-10 mx-auto py-3 text-md font-inter font-semibold">
-        {" "}
-        {children}{" "}
-      </span>{" "}
+      className={`relative flex items-center justify-center ${className}`}
+    >
+      <img src={imageSrc} alt="Button background" className="w-full" />
+      <span className="absolute font-libre text-white text-sm lg:text-lg">
+        {children}
+      </span>
     </button>
   );
 };

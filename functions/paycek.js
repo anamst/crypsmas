@@ -7,7 +7,13 @@ exports.handler = async function(event, context) {
     const secretKey = process.env.GATSBY_PAYCEK_SECRET_KEY;
 
     if (!profileCode || !secretKey) {
-      throw new Error('Missing PayCek credentials');
+      return {
+        statusCode: 500,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ error: 'Missing PayCek credentials' })
+      };
     }
 
     const timestamp = Date.now();
@@ -39,6 +45,10 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         url,
         debug: {
@@ -49,9 +59,13 @@ exports.handler = async function(event, context) {
     };
 
   } catch (error) {
-    console.error('API Error:', error);
+    console.error('Function error:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         error: error.message
       })
