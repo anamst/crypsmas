@@ -18,8 +18,6 @@ exports.handler = async function(event, context) {
       'id': paymentId,
       'p': '1000',
       't': '1000',
-      'test': false,
-      'l': 'hr'
     };
 
     const dataJson = JSON.stringify(paymentData);
