@@ -10,18 +10,19 @@ exports.handler = async function(event, context) {
       throw new Error('Missing PayCek credentials');
     }
 
+    const amount = event.queryStringParameters?.amount || '1000'; // Default to 10 EUR
+
     const timestamp = Date.now();
     const random = Math.random().toString(36).substring(2, 8);
     const paymentId = `PAY_${timestamp}_${random}`;
 
     const paymentData = {
-        'id': paymentId,
-        'p': '1',        // Minimum amount (0.01 EUR)
-        't': '1000000',  // Maximum amount (10000 EUR)
-        'test': false,   // Live mode
-        'l': 'hr',       // Croatian language
-        'a': true        // Allow amount selection
-      };
+      'id': paymentId,
+      'p': amount,
+      't': amount,
+      'test': false,
+      'l': 'hr'
+    };
 
     const dataJson = JSON.stringify(paymentData);
     const dataBytes = Buffer.from(dataJson, 'utf-8');
