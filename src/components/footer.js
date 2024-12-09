@@ -15,7 +15,7 @@ const Footer = () => {
                     <a href="https://www.instagram.com/udruga_ubik/" target="_blank" className='w-8 mx-4 lg:w-10 lg:mx-6'>
                         <StaticImage src='../images/instagram.png' width={80} height={80} />
                     </a>
-                    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fubikhr" target="_blank" className='w-8 lg:w-10'>
+                    <a href="https://x.com/UbiKhr" target="_blank" className='w-8 lg:w-10'>
                         <StaticImage src='../images/twitter.png' width={80} height={80} />
                     </a>
                 </div>

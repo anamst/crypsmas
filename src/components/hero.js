@@ -58,7 +58,7 @@ const Hero = ({ children }) => {
       >
         <div className="container mx-auto w-full px-4 lg:px-16 xl:px-12 flex flex-col lg:flex-row-reverse justify-start items-center lg:justify-between lg:items-center"> 
             <div className="bg-white shadow-2xl rounded-full py-12 lg:py-16 lg:mr-20 px-8">
-                <StaticImage src="../images/hmblogo.png" placeholder="blurred" className="w-24 lg:w-48" />
+             <a href="https://beskucnici.info/" target="_blank"><StaticImage src="../images/hmblogo.png" placeholder="blurred" className="w-24 lg:w-48" /></a>   
             </div>
             <div className="flex flex-col justify-between items-start text-left pt-8 lg:pt-0">
                 <h2 className="font-libre text-bordo uppercase italic text-md lg:text-lg">humanitarna akcija</h2>

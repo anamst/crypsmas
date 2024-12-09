@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 const Header = ({ children }) => {
   const [isScrolled, setScrolled] = useState(false);
 
-  // Update `isScrolled` based on scroll position
+  
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust threshold as needed
+      if (window.scrollY > 120) { 
         setScrolled(true);
       } else {
         setScrolled(false);
