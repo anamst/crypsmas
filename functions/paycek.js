@@ -16,8 +16,8 @@ exports.handler = async function(event, context) {
 
     const paymentData = {
       'id': paymentId,
-      'p': '1000',    // Minimum amount
-      't': '1000',    // Minimum amount
+      'p': '100',     // Minimum amount (1 EUR)
+      't': '100000',  // Maximum amount (1000 EUR)
       'test': false,  // Live mode
       'l': 'hr',      // Croatian language
       'a': true      // Allow amount selection in PayCek interface
