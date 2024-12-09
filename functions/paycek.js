@@ -15,13 +15,13 @@ exports.handler = async function(event, context) {
     const paymentId = `PAY_${timestamp}_${random}`;
 
     const paymentData = {
-      'id': paymentId,
-      'p': '100',     // Minimum amount (1 EUR)
-      't': '100000',  // Maximum amount (1000 EUR)
-      'test': false,  // Live mode
-      'l': 'hr',      // Croatian language
-      'a': true      // Allow amount selection in PayCek interface
-    };
+        'id': paymentId,
+        'p': '1',        // Minimum amount (0.01 EUR)
+        't': '1000000',  // Maximum amount (10000 EUR)
+        'test': false,   // Live mode
+        'l': 'hr',       // Croatian language
+        'a': true        // Allow amount selection
+      };
 
     const dataJson = JSON.stringify(paymentData);
     const dataBytes = Buffer.from(dataJson, 'utf-8');
