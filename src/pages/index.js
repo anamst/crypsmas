@@ -32,7 +32,7 @@ const IndexPage = () => {
               </Card>
               <Card className="lg:w-1/3 mb-14 lg:my-0 lg:h-full">
                 <StaticImage src="../images/srce.png" placeholder="blurred"  />
-                <p className="pt-4 px-8"><strong>Cilj</strong> ovogodišnje akcije darivanja je prikupiti iznos od <span className="strong text-red">10.000 eura</span> u svrhu podržavanja rada Hrvatske mreže za beskućnike. Akcija traje <strong>od 02.12. do 31.12.2024</strong> i donirati možete u <strong>kriptovalutama</strong> ili direktnom uplatom na naš IBAN.</p>
+                <p className="pt-4 px-8"><strong>Cilj</strong> ovogodišnje akcije darivanja je prikupiti iznos od <span className="strong text-red">10.000 eura</span> u svrhu podržavanja rada Hrvatske mreže za beskućnike. Akcija traje <strong>od 11.12. do 31.12.2024</strong> i donirati možete u <strong>kriptovalutama</strong> ili direktnom uplatom na naš IBAN.</p>
               </Card>
             </div>
           </div>
