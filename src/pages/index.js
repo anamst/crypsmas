@@ -46,7 +46,7 @@ const IndexPage = () => {
               <strong>Pomozite nam</strong> da uljepšamo blagdane i ulazak u novu godinu našim nevidljivim sugrađanima!
             </p>
             <Button imageSrc={btn} containerClass="items-center">DONIRAJ KRIPTO</Button>
-            <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4 pb-16">Ili uplatom na IBAN: HR183981793284791874 <br></br> Opis plaćanja: Donacija za humanitarnu akciju</p>
+            <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4 pb-16">Ili uplatom na IBAN: HR0324020061100858697 <br></br> Opis plaćanja: Donacija za humanitarnu akciju</p>
           </div>
         {/*   <StaticImage src="../images/mobilepplhappy.png" placeholder="blurred" className="w-full md:hidden lg:hidden xl:hidden" imgClassName="md:hidden" />
           <StaticImage src="../images/desktoppplhappy.png" placeholder="blurred" className="w-full py-10 hidden md:block" imgClassName="hidden md:block" /> */}

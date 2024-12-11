@@ -65,7 +65,7 @@ const Hero = ({ children }) => {
                 <h1 className="font-libre text-black uppercase font-semibold text-lg lg:text-2xl lg:py-4">merry crypsmas</h1>
                 <p className="font-inter text-darkgrey text-sm pb-8 lg:pb-10 lg:text-md2 lg:w-2/3 italic">Pozivamo vas da podržite UBIK humanitarnu akciju namijenjenu pomaganju jednoj od društveno najugroženijih skupina!</p>
                 <Button imageSrc={btn} containerClass="items-start">DONIRAJ KRIPTO</Button>
-                <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4 pb-16">Ili uplatom na IBAN: HR183981793284791874 <br></br> Opis plaćanja: Donacija za humanitarnu akciju</p>
+                <p className="font-inter text-darkgrey text-sm lg:text-md pt-2 lg:pt-4 pb-16">Ili uplatom na IBAN: HR0324020061100858697 <br></br> Opis plaćanja: Donacija za humanitarnu akciju</p>
             </div>
             
         </div>       
