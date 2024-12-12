@@ -41,7 +41,8 @@ const IndexPage = () => {
          {/*   <StaticImage src="../images/mobilepplshake.png" placeholder="blurred" className="w-full md:hidden" imgClassName="md:hidden"  />
           <StaticImage src="../images/desktoppplshake.png" placeholder="blurred" className="w-full py-10 hidden md:block" imgClassName="hidden md:block" /> */}
           <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 lg:py-20">
-            <h2 className="font-libre text-bordo uppercase text-lg lg:text-2xl italic pt-8">cilj: 10000 EUR!</h2>
+            <h2 className="font-libre text-bordo uppercase text-lg lg:text-2xl italic pt-8 line-through">cilj: 10000 EUR!</h2>
+            <h2 className="font-libre text-bordo uppercase text-lg lg:text-2xl italic pt-8">cilj: 20000 EUR!</h2>
             <p className="font-libre text-darkgrey text-sm lg:text-md2 lg:w-1/2 py-8 lg:py-12">
               <strong>Pomozite nam</strong> da uljepšamo blagdane i ulazak u novu godinu našim nevidljivim sugrađanima!
             </p>
@@ -54,7 +55,7 @@ const IndexPage = () => {
         <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: `url(${bgsiva})` }}>
           <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 py-14 lg:py-20">
             <h2 className="font-libre text-bordo uppercase italic text-md lg:text-lg">Dosad je prikupljeno:</h2>
-            <ProgressBar value={value} target={target} className="mt-8" />
+            <ProgressBar value={10300} target={20000} className="mt-8" />
             <p className="font-inter text-tiny lg:text-sm italic pt-2 text-darkgrey font-light lg:pt-4">Akcija traje do 31.12.2024.</p>
           </div>
         </section>
