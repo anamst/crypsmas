@@ -63,7 +63,7 @@ const Button = ({ children, className = "", imageSrc, altText = "icon", containe
           type="text"
           value={amount}
           onChange={handleAmountChange}
-          placeholder="Iznos donacije u EUR"
+          placeholder="Upisite iznos donacije u EUR"
           className="px-4 py-3 rounded-full text-center focus:outline-none focus:ring-2 focus:ring-red focus:border-transparent shadow-lg w-full"
         />
         <button
