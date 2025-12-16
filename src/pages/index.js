@@ -56,7 +56,7 @@ const IndexPage = () => {
         <section className="w-full h-full bg-scroll relative bg-cover bg-center text-center" style={{ backgroundImage: `url(${bgsiva})` }}>
           <div className="flex flex-col justify-around items-center pt-14 px-6 lg:px-20 xl:px-32 py-14 lg:py-20">
             <h2 className="font-libre text-bordo uppercase italic text-md lg:text-lg">Dosad je prikupljeno:</h2>
-            <ProgressBar value={600} target={10000} className="mt-8" />
+            <ProgressBar value={900} target={10000} className="mt-8" />
             <p className="font-inter text-tiny lg:text-sm italic pt-2 text-darkgrey font-light lg:pt-4">Akcija traje do 31.12.2025.</p>
           </div>
         </section>
